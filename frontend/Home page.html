@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Hub</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         Header
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+            <img src="img/zomato.png" alt="Food Hub Logo">
+        </div>
+
+        <ul>
+            <li>
+                <a href="partner.html">Add restaurant</a>
+            </li>
+
+            <li>
+                <a href="#">Login</a>
+            </li>
+
+            <li>
+                <a href="#">Signup</a>
+            </li>
+        </ul>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             Hero Section
+        ========================== -->
+
+        <section class="hero">
+
+            <img src="img/zomato.png" alt="Food Hub Logo">
+
+            <p>
+                Find the best restaurants, cafés and bars in India
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             About Section
+        ========================== -->
+
+        <section class="about">
+
+            <h2>Food Delivery Made Easy</h2>
+
+            <p>
+                Discover the best food around you with Food Hub.
+                We deliver fast and fresh from top restaurants.
+                Browse menus, read reviews, filter by cuisine,
+                and enjoy delicious food delivered to your doorstep.
+            </p>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <img src="img/delivery.png" alt="Fast Delivery">
+
+                    <h3>Fast Delivery</h3>
+
+                    <p>
+                        Your food delivered hot and fresh right to your home.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img src="img/search.png" alt="Search Restaurants">
+
+                    <h3>Search Restaurants</h3>
+
+                    <p>
+                        Find restaurants based on cuisines, ratings, and reviews.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img src="img/order.png" alt="Easy Ordering">
+
+                    <h3>Easy Ordering</h3>
+
+                    <p>
+                        A simple ordering process with secure payments.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Restaurants Section
+        ========================== -->
+
+        <section class="restaurants">
+
+            <h2>Explore Restaurants</h2>
+
+            <div id="restaurant-list" class="cards">
+
+                <!-- Restaurants will be loaded from FastAPI -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Menu Section
+        ========================== -->
+
+        <section class="menu">
+
+            <h2>Menu</h2>
+
+            <div id="menu-list" class="cards">
+
+                <!-- Food items will be loaded from FastAPI -->
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+     Cart Section
+========================== -->
+
+        <section class="cart">
+
+            <h2>My Cart</h2>
+
+            <div id="cart-list">
+                <!-- Cart items will appear here -->
+            </div>
+
+            <h3 id="cart-total">
+                Total: ₹0
+            </h3>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
+    <footer>
+
+        Copyright © 2024 Food Hub. All rights reserved.
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

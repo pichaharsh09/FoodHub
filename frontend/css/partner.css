@@ -1,0 +1,246 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+}
+
+/* ✅ Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #e23744;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo img {
+    height: 28px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-radius: 90px;
+    
+}
+
+ul li a:hover {
+    opacity: 0.8;
+}
+
+/* Login button */
+.login-btn {
+    border: 2px solid white;
+    padding: 8px 18px;
+    border-radius: 90px;
+    font-weight: 500;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: #e23744;
+}
+
+
+/* ✅ Hero Section */
+.hero {
+    height: 80vh;
+    background: url("../img/Partner_bg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    top: 0;
+    left: 0;
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: #e23744;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #c71f2c;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: #e23744;
+}
+
+/* ✅ Why Section */
+.why {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.why h2 {
+    font-size: 32px;
+    color: #e23744;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 280px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #e23744;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #444;
+}
+
+/* ✅ Register Section */
+.register {
+    padding: 60px 40px;
+    background-color: #fff5f6;
+    text-align: center;
+}
+
+.register h2 {
+    font-size: 32px;
+    color: #e23744;
+    margin-bottom: 30px;
+}
+
+.partner-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.partner-form input,
+.partner-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.partner-form input:focus,
+.partner-form textarea:focus {
+    border-color: #e23744;
+}
+
+.partner-form button {
+    background-color: #e23744;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.partner-form button:hover {
+    background-color: #c71f2c;
+}
+
+/* ✅ Footer */
+footer {
+    background-color: #e23744;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
