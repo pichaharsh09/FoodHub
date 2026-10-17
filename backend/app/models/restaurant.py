@@ -1,9 +1,14 @@
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from typing import TYPE_CHECKING
+
 from sqlalchemy import String
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from ..database.base import Base
 
-from .food import Food
+if TYPE_CHECKING:
+    from .food import Food
+
+
 
 class Restaurant(Base):
     __tablename__ = "restaurants"
@@ -13,5 +18,5 @@ class Restaurant(Base):
     address: Mapped[str] = mapped_column(String(255))
 
     foods: Mapped[list["Food"]] = relationship(
-        back_populates="restaurant"
+           back_populates="restaurant"
     )

@@ -1,10 +1,14 @@
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from typing import TYPE_CHECKING
+
 from sqlalchemy import ForeignKey, String
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from ..database.base import Base
 
-from .user import User
-from .order_item import OrderItem
+if TYPE_CHECKING:
+    from .order_item import OrderItem
+    from .user import User
+
 
 class Order(Base):
     __tablename__ = "orders"
@@ -22,11 +26,13 @@ class Order(Base):
 
     # Order -> User
     user: Mapped["User"] = relationship(
+        "User",
         back_populates="orders"
     )
 
     # Order -> OrderItems
     order_items: Mapped[list["OrderItem"]] = relationship(
+        "OrderItem",
         back_populates="order",
         cascade="all, delete-orphan"
     )

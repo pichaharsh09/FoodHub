@@ -1,10 +1,15 @@
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from typing import TYPE_CHECKING
+
 from sqlalchemy import ForeignKey, String
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from ..database.base import Base
 
-from .restaurant import Restaurant
-from .order_item import OrderItem
+if TYPE_CHECKING:
+    from .order_item import OrderItem
+    from .restaurant import Restaurant
+
+
 
 class Food(Base):
     __tablename__ = "foods"
@@ -23,10 +28,10 @@ class Food(Base):
     )
 
     restaurant: Mapped["Restaurant"] = relationship(
-        back_populates="foods"
+    "Restaurant",
+    back_populates="foods"
     )
-
-    # Food -> OrderItems
     order_items: Mapped[list["OrderItem"]] = relationship(
-        back_populates="food"
+    "OrderItem",
+    back_populates="food"
     )

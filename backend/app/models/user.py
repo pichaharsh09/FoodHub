@@ -1,9 +1,13 @@
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from typing import TYPE_CHECKING
+
 from sqlalchemy import String
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from ..database.base import Base
 
-from .order import Order
+if TYPE_CHECKING:
+    from .order import Order
+
 
 class User(Base):
     __tablename__ = "users"
@@ -15,6 +19,7 @@ class User(Base):
 
     # User -> Orders
     orders: Mapped[list["Order"]] = relationship(
+        "Order",
         back_populates="user",
         cascade="all, delete-orphan"
     )
